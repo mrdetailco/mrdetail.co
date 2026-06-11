@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MR Detail Co — Premium Mobile Detailing, Orange County</title>
+<meta name="description" content="MR Detail Co. Premium mobile car detailing in Orange County, CA. Maintenance from $100, Full Detail from $200, Premium from $300. We come to you — text (949) 285-4662.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoWash",
+  "name": "MR Detail Co",
+  "description": "Premium mobile car detailing serving Orange County, CA. We come to you.",
+  "telephone": "+19492854662",
+  "email": "rob@mrdetail.co",
+  "url": "https://mrdetail.co",
+  "areaServed": "Orange County, CA",
+  "priceRange": "$60-$420",
+  "sameAs": ["https://instagram.com/mrdetail.oc"]
+}
+</script>
+<style>
+:root{
+  --ink:#0a0a0b;
+  --panel:#101113;
+  --line:rgba(255,255,255,.10);
+  --line-strong:rgba(255,255,255,.18);
+  --silver-hi:#f0f1f3;
+  --silver:#c4c8ce;
+  --silver-low:#84898f;
+  --chrome:linear-gradient(180deg,#eef0f3 0%,#d2d6dc 42%,#9ea3ab 58%,#dee2e7 74%,#969ba3 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--silver);font-family:'Space Grotesk',sans-serif;font-weight:340;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:#3a3d42;color:#fff}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--silver);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.display{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 122,'wght' 680;text-transform:uppercase;letter-spacing:.14em;line-height:1.08}
+.chrome{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--silver-low);font-weight:430}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:96px 24px 72px;background:radial-gradient(1100px 540px at 50% 30%, #16171a 0%, var(--ink) 62%);border-bottom:1px solid var(--line)}
+.logo-frame{position:relative;width:min(560px,86vw)}
+.logo-frame svg{width:100%;height:auto;display:block}
+.sweep{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.34) 50%,transparent 62%);background-size:300% 100%;background-position:120% 0;animation:sweep 7s ease-in-out infinite;mix-blend-mode:overlay}
+@keyframes sweep{0%,55%{background-position:130% 0}80%,100%{background-position:-60% 0}}
+@media (prefers-reduced-motion:reduce){.sweep{animation:none;display:none}}
+.hero .sub{margin-top:34px;font-size:14px;letter-spacing:.30em;text-transform:uppercase;color:var(--silver-low)}
+.cta-row{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;padding:16px 34px;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116,'wght' 600;letter-spacing:.18em;text-transform:uppercase;font-size:13px;border:1px solid var(--line-strong);transition:border-color .25s,background .25s,color .25s;background:none;color:var(--silver);cursor:pointer}
+.btn:hover{border-color:var(--silver)}
+.btn-solid{background:var(--chrome);color:#0a0a0b;border-color:transparent;font-variation-settings:'wdth' 116,'wght' 700}
+.btn-solid:hover{filter:brightness(1.06)}
+.hero .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;color:#54585e;text-transform:uppercase}
+
+section{padding:104px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(26px,4vw,40px)}
+.sec-head .rule{flex:1;height:1px;background:var(--line);min-width:60px;align-self:center}
+
+/* size selector */
+.size-row{display:flex;gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:42px;flex-wrap:wrap}
+.size-btn{flex:1;min-width:140px;background:var(--ink);border:none;color:var(--silver-low);font-family:'Space Grotesk',sans-serif;padding:16px 10px;cursor:pointer;transition:background .25s,color .25s;text-align:center}
+.size-btn .t{display:block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 620;text-transform:uppercase;letter-spacing:.16em;font-size:13px;color:var(--silver)}
+.size-btn .s{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+.size-btn[aria-pressed="true"]{background:#1a1c1f}
+.size-btn[aria-pressed="true"] .t{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.size-btn:hover{background:#141518}
+
+/* package cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.card{background:var(--ink);padding:40px 32px 42px;transition:background .3s;display:flex;flex-direction:column}
+.card:hover{background:var(--panel)}
+.card h3{font-size:19px;margin-bottom:4px}
+.card .meta{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver-low);margin-bottom:24px}
+.price{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 120,'wght' 650;font-size:46px;letter-spacing:.02em;margin-bottom:6px}
+.price sup{font-size:.45em;vertical-align:.7em;letter-spacing:0}
+.split{font-size:13px;color:var(--silver-low);margin-bottom:24px;line-height:1.9}
+.split b{color:var(--silver);font-weight:500}
+.card ul{list-style:none;display:grid;gap:10px;font-size:14.5px;color:var(--silver);margin-top:auto}
+.card li{padding-left:20px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--silver-low)}
+.card .grp{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-low);margin:18px 0 10px}
+.card .grp:first-of-type{margin-top:0}
+.soil-note{margin-top:26px;font-size:13px;color:#6a6f76;text-align:center;letter-spacing:.04em}
+
+/* add-ons */
+.addons{margin-top:54px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.addon{background:var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 26px}
+.addon .n{font-size:15px;color:var(--silver)}
+.addon .d{font-size:12px;color:var(--silver-low);margin-left:8px}
+.addon .p{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 620;font-size:17px;white-space:nowrap}
+.byquote{margin-top:1px;border:1px solid var(--line);border-top:none;padding:20px 26px;display:flex;gap:14px 30px;flex-wrap:wrap;align-items:center;background:linear-gradient(90deg,#1a1c1f,#101113)}
+.byquote .eyebrow{margin-right:8px}
+.byquote span{font-size:14px;letter-spacing:.10em;text-transform:uppercase;color:var(--silver)}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:54px}
+.pillar .eyebrow{display:block;margin-bottom:16px}
+.pillar h3{font-size:21px;margin-bottom:14px}
+.pillar p{font-size:15px;color:#9da2a9}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);counter-reset:step}
+.step{background:var(--ink);padding:38px 32px}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125,'wght' 650;font-size:15px;letter-spacing:.2em;display:block;margin-bottom:18px;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:17px;margin-bottom:8px}
+.step p{font-size:14px;color:#9da2a9}
+.area{margin-top:46px;font-size:14px;color:var(--silver-low);text-align:center;letter-spacing:.06em}
+.area b{color:var(--silver);font-weight:500}
+
+/* contact */
+.contact{text-align:center;border-bottom:none;padding-bottom:84px}
+.contact .eyebrow{display:block;margin-bottom:22px}
+.phone{display:inline-block;font-size:clamp(34px,7vw,64px);margin-bottom:14px}
+.contact .lines{margin-top:18px;display:flex;gap:14px 38px;justify-content:center;flex-wrap:wrap;font-size:15px}
+.contact .lines a{color:var(--silver);border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+.contact .lines a:hover{color:var(--silver-hi);border-color:var(--line-strong)}
+footer{padding:30px 24px 40px;text-align:center;font-size:12px;color:#54585e;letter-spacing:.14em;text-transform:uppercase}
+
+@media(max-width:880px){
+  .cards,.pillars,.steps{grid-template-columns:1fr}
+  .addons{grid-template-columns:1fr}
+  .pillars{gap:40px}
+  section{padding:78px 0}
+  .size-btn{min-width:46%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="logo-frame">
+    <svg viewBox="156 326 711 331" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MR Detail Co — Precision, Protection, Presence">
+      <defs>
+        <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#eef0f3"/><stop offset=".42" stop-color="#d2d6dc"/><stop offset=".58" stop-color="#9ea3ab"/><stop offset=".74" stop-color="#dee2e7"/><stop offset="1" stop-color="#969ba3"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#chrome)" fill-rule="evenodd" d="M 405.3,634.3 L 404.3,634.7 L 403.3,635.2 L 403.0,635.5 L 402.2,636.8 L 402.0,638.2 L 402.8,639.8 L 403.8,640.8 L 405.3,641.2 L 406.3,641.2 L 407.7,640.7 L 408.8,639.5 L 409.0,639.2 L 409.0,636.8 L 408.5,635.8 L 407.8,635.0 L 407.3,634.7 L 406.3,634.3 Z M 626.3,634.2 L 624.8,634.8 L 624.2,635.5 L 623.7,636.8 L 623.7,639.0 L 624.0,639.8 L 624.8,640.7 L 626.2,641.2 L 627.7,641.2 L 629.2,640.7 L 629.8,640.0 L 630.5,638.8 L 630.7,638.2 L 630.7,637.3 L 630.5,636.7 L 630.0,635.7 L 629.2,634.8 L 627.5,634.2 Z M 754.7,630.3 L 752.8,630.0 L 752.2,630.5 L 752.0,639.2 L 751.2,639.8 L 743.5,630.5 L 741.2,630.2 L 740.3,630.7 L 740.3,645.7 L 740.8,646.3 L 742.5,646.5 L 743.3,645.3 L 743.0,637.0 L 743.8,636.3 L 752.3,646.5 L 754.0,646.7 L 755.0,646.2 Z M 667.3,630.2 L 666.8,630.8 L 666.7,634.7 L 666.8,645.7 L 667.8,646.3 L 669.0,646.2 L 669.5,645.5 L 669.8,641.8 L 670.8,641.2 L 672.0,641.2 L 673.8,642.2 L 676.8,646.2 L 677.8,646.5 L 679.5,646.3 L 679.7,645.5 L 676.8,641.5 L 677.0,640.7 L 678.7,639.5 L 680.0,637.0 L 680.0,633.8 L 679.2,632.2 L 678.0,631.0 L 675.2,630.0 Z M 669.5,633.8 L 670.2,633.0 L 670.7,632.8 L 674.3,632.8 L 675.7,633.2 L 676.5,633.8 L 677.0,634.8 L 677.0,636.3 L 676.8,636.8 L 676.2,637.7 L 675.2,638.2 L 672.3,638.2 L 671.0,638.5 L 670.0,638.3 L 669.5,637.7 Z M 658.3,630.8 L 656.2,630.0 L 648.8,630.2 L 648.0,630.7 L 647.8,644.2 L 648.0,645.5 L 648.5,646.2 L 649.8,646.3 L 650.7,645.8 L 650.7,642.7 L 651.2,642.0 L 656.7,641.3 L 658.5,640.7 L 660.0,639.3 L 661.0,637.0 L 661.0,634.7 L 660.0,632.3 Z M 651.0,633.3 L 651.3,633.0 L 652.3,632.8 L 652.5,632.7 L 655.5,632.8 L 656.8,633.3 L 657.8,634.5 L 658.0,636.3 L 657.7,637.5 L 656.8,638.3 L 655.8,638.8 L 651.7,638.8 L 651.0,638.5 L 650.8,638.2 L 650.8,633.7 Z M 592.0,630.2 L 591.3,631.0 L 591.5,646.2 L 593.7,646.5 L 594.5,645.7 L 594.3,636.8 L 595.2,636.2 L 603.0,646.0 L 605.8,646.2 L 606.2,641.3 L 605.7,630.2 L 604.0,630.0 L 603.2,630.8 L 603.2,639.3 L 602.3,640.0 L 594.3,630.5 Z M 560.0,630.0 L 559.5,630.2 L 559.0,630.8 L 559.0,645.7 L 559.5,646.3 L 561.2,646.5 L 561.8,646.2 L 562.2,645.5 L 562.0,630.8 L 561.5,630.2 Z M 540.7,630.2 L 540.2,630.8 L 540.5,632.3 L 541.2,632.7 L 544.5,632.7 L 545.5,633.5 L 545.3,645.3 L 546.0,646.3 L 547.8,646.3 L 548.3,645.7 L 548.3,633.7 L 549.5,632.7 L 552.0,632.8 L 552.8,632.5 L 553.3,631.8 L 553.3,630.7 L 552.5,630.0 Z M 504.3,630.2 L 503.8,630.8 L 504.0,645.8 L 505.8,646.5 L 515.7,646.3 L 516.2,645.7 L 515.7,643.8 L 508.0,643.7 L 507.2,643.2 L 506.8,640.3 L 507.3,639.7 L 513.8,639.5 L 514.7,639.0 L 515.0,637.8 L 514.2,637.0 L 507.3,636.7 L 506.7,634.2 L 507.8,632.8 L 515.0,632.5 L 515.8,631.8 L 515.7,630.3 Z M 486.2,630.2 L 485.7,630.8 L 485.7,631.7 L 486.2,632.3 L 489.3,632.7 L 490.5,633.7 L 490.5,645.7 L 491.5,646.5 L 493.0,646.3 L 493.7,645.2 L 493.7,633.5 L 494.7,632.7 L 497.2,632.7 L 498.0,632.3 L 498.3,631.8 L 498.3,630.7 L 497.3,630.0 Z M 437.8,631.0 L 435.0,630.0 L 428.0,630.0 L 427.2,630.3 L 426.8,631.3 L 426.8,645.3 L 427.2,646.0 L 427.8,646.3 L 429.7,646.0 L 430.0,645.3 L 430.0,642.7 L 430.5,642.0 L 434.0,641.7 L 436.8,641.0 L 439.2,639.2 L 440.0,637.2 L 440.0,634.3 L 439.2,632.3 Z M 430.0,633.3 L 430.3,633.0 L 430.8,632.8 L 434.5,632.8 L 435.8,633.3 L 436.5,634.0 L 436.8,634.7 L 436.8,637.2 L 436.5,637.8 L 435.7,638.7 L 435.2,638.8 L 433.7,639.0 L 430.8,639.0 L 430.2,638.7 L 429.8,638.0 L 429.8,633.7 Z M 338.2,630.0 L 337.7,630.2 L 337.2,630.8 L 337.0,633.0 L 337.0,645.3 L 337.3,646.2 L 338.0,646.5 L 339.2,646.5 L 339.8,646.2 L 340.2,645.2 L 340.0,643.8 L 340.2,641.2 L 340.0,630.8 L 339.5,630.2 Z M 310.0,630.0 L 309.5,630.2 L 309.0,630.8 L 309.0,645.3 L 309.3,646.2 L 310.0,646.5 L 311.2,646.5 L 311.8,646.2 L 312.0,645.8 L 312.0,631.5 L 311.7,630.3 L 311.0,630.0 Z M 251.3,630.3 L 250.7,631.7 L 250.8,645.8 L 251.7,646.3 L 252.7,646.3 L 253.5,645.8 L 253.7,642.3 L 254.3,641.3 L 255.2,641.2 L 257.5,641.8 L 260.7,646.0 L 261.5,646.3 L 263.5,646.2 L 263.7,645.3 L 261.0,641.5 L 261.2,640.7 L 263.5,638.7 L 264.0,637.3 L 264.0,633.7 L 263.0,631.8 L 261.8,630.8 L 259.5,630.0 Z M 253.8,633.3 L 254.8,632.8 L 257.5,632.8 L 258.7,633.0 L 259.8,633.5 L 260.3,634.0 L 260.8,634.8 L 260.8,636.3 L 260.3,637.3 L 259.8,637.8 L 258.3,638.2 L 256.5,638.2 L 255.7,638.3 L 255.0,638.7 L 254.0,638.5 L 253.5,637.8 L 253.7,633.7 Z M 242.3,630.8 L 240.3,630.0 L 232.8,630.0 L 232.0,630.5 L 231.7,631.3 L 231.7,645.2 L 232.3,646.2 L 233.7,646.3 L 234.5,646.0 L 234.8,645.3 L 234.7,642.7 L 235.2,642.0 L 239.0,641.7 L 242.7,640.5 L 243.8,639.5 L 244.8,637.3 L 244.8,634.3 L 243.8,632.2 Z M 234.8,633.3 L 235.2,633.0 L 235.7,632.8 L 239.3,632.8 L 240.3,633.2 L 241.5,634.3 L 241.7,634.7 L 241.8,636.3 L 241.5,637.3 L 240.3,638.5 L 239.5,638.8 L 237.7,639.0 L 235.7,639.0 L 235.2,638.8 L 234.7,638.2 L 234.7,633.7 Z M 782.0,630.2 L 782.0,646.0 L 782.8,646.5 L 791.3,646.5 L 793.8,646.0 L 794.0,644.5 L 793.2,643.8 L 785.8,643.5 L 785.0,643.0 L 784.8,640.3 L 785.5,639.5 L 792.0,639.5 L 792.7,639.2 L 793.0,637.8 L 791.8,636.8 L 785.3,636.8 L 784.7,635.0 L 784.8,633.5 L 785.8,632.7 L 793.3,632.5 L 793.8,631.8 L 793.7,630.3 L 783.7,629.8 Z M 767.7,629.8 L 763.8,631.7 L 762.2,633.5 L 761.0,636.7 L 761.0,640.0 L 762.5,643.2 L 764.5,645.0 L 768.3,646.5 L 771.3,646.5 L 775.0,644.8 L 775.7,643.8 L 775.5,643.2 L 774.2,642.2 L 771.0,643.7 L 768.3,643.7 L 766.7,643.0 L 764.8,641.3 L 764.0,639.8 L 764.0,636.5 L 765.0,634.7 L 766.7,633.2 L 770.7,632.7 L 774.3,634.2 L 775.8,633.0 L 776.0,632.2 L 774.3,630.8 L 772.2,630.0 Z M 722.3,630.3 L 722.2,646.0 L 723.0,646.5 L 733.0,646.5 L 734.2,646.0 L 734.5,644.5 L 733.7,643.8 L 726.5,643.7 L 725.0,642.3 L 725.0,640.5 L 725.7,639.7 L 732.2,639.3 L 733.2,638.5 L 733.0,637.2 L 732.2,636.8 L 725.5,636.7 L 725.0,636.0 L 725.2,633.3 L 726.3,632.7 L 733.3,632.7 L 734.2,632.0 L 734.0,630.3 L 733.2,629.8 L 723.7,629.8 Z M 708.5,629.8 L 706.2,630.7 L 704.7,632.0 L 703.8,633.8 L 704.0,635.8 L 705.8,638.2 L 712.2,640.5 L 712.8,642.2 L 710.8,643.7 L 708.3,643.7 L 705.8,642.3 L 704.7,642.3 L 703.8,643.2 L 703.7,644.2 L 704.2,644.8 L 707.5,646.3 L 711.3,646.5 L 714.0,645.7 L 715.2,644.7 L 716.0,643.0 L 715.8,639.8 L 714.0,637.8 L 707.7,635.7 L 706.8,634.2 L 708.7,632.7 L 711.7,632.7 L 714.0,633.5 L 715.0,632.8 L 715.3,631.7 L 712.0,630.0 Z M 686.5,630.2 L 686.2,638.5 L 686.7,646.2 L 695.3,646.5 L 698.2,646.0 L 698.7,644.8 L 698.0,644.0 L 690.2,643.5 L 689.3,643.0 L 689.2,640.5 L 689.7,639.8 L 696.3,639.5 L 697.0,639.2 L 697.3,637.5 L 696.5,636.8 L 690.0,636.8 L 689.2,636.0 L 689.2,633.7 L 690.2,632.8 L 697.7,632.7 L 698.5,631.7 L 698.3,630.3 L 688.0,629.8 Z M 574.5,630.0 L 571.2,631.5 L 569.2,633.7 L 568.0,636.8 L 568.0,640.2 L 569.2,642.7 L 571.8,645.3 L 575.7,646.7 L 578.3,646.7 L 582.0,645.2 L 584.0,643.2 L 585.3,639.7 L 585.3,636.5 L 584.0,633.3 L 582.0,631.3 L 578.8,630.0 Z M 575.5,632.7 L 577.7,632.7 L 579.5,633.2 L 581.2,634.8 L 582.2,636.7 L 582.2,639.5 L 581.5,641.0 L 580.3,642.3 L 579.3,643.0 L 577.7,643.7 L 575.8,643.7 L 573.5,642.7 L 572.0,641.2 L 571.0,639.3 L 571.0,637.2 L 571.5,635.8 L 572.3,634.5 L 573.7,633.3 Z M 527.2,630.0 L 523.5,632.0 L 521.7,634.7 L 521.2,639.5 L 522.7,643.2 L 526.0,645.8 L 528.7,646.7 L 533.3,646.0 L 535.8,644.0 L 534.8,642.3 L 534.0,642.2 L 530.5,643.7 L 527.5,643.3 L 525.0,641.2 L 524.2,639.0 L 524.3,637.0 L 525.2,635.0 L 527.5,633.0 L 530.3,632.5 L 532.5,633.0 L 533.8,633.8 L 535.0,633.8 L 536.0,633.0 L 536.2,632.2 L 535.0,631.2 L 532.2,630.0 Z M 470.8,630.0 L 467.3,631.7 L 465.8,633.3 L 464.8,635.2 L 464.3,637.0 L 464.5,640.0 L 465.3,642.3 L 466.5,644.0 L 467.7,645.0 L 470.5,646.3 L 472.7,646.7 L 474.7,646.5 L 478.2,645.0 L 480.0,643.2 L 481.5,640.2 L 481.7,637.0 L 480.7,634.0 L 478.0,631.2 L 475.3,630.0 Z M 472.5,632.7 L 474.3,632.7 L 475.5,633.0 L 476.5,633.7 L 477.7,635.0 L 478.2,636.0 L 478.5,637.5 L 478.5,638.8 L 477.7,641.2 L 476.0,642.8 L 473.7,643.8 L 471.7,643.7 L 469.8,642.8 L 468.3,641.3 L 467.7,640.0 L 467.5,639.2 L 467.5,637.0 L 468.5,634.8 L 470.5,633.2 Z M 446.3,630.0 L 445.8,630.7 L 445.7,634.0 L 446.0,645.8 L 446.8,646.3 L 448.2,646.2 L 448.7,645.5 L 449.0,641.7 L 450.3,641.0 L 451.3,641.0 L 453.0,642.2 L 455.7,646.0 L 458.8,646.3 L 458.8,645.2 L 456.0,641.3 L 456.2,640.5 L 457.3,639.8 L 458.8,637.8 L 459.2,634.8 L 458.5,632.5 L 457.2,631.2 L 455.3,630.2 Z M 449.0,633.5 L 449.5,633.0 L 450.0,632.8 L 451.8,633.0 L 452.5,632.8 L 454.2,633.0 L 455.0,633.3 L 456.0,634.5 L 456.0,636.8 L 455.8,637.2 L 455.0,638.0 L 454.0,638.3 L 450.5,638.7 L 449.7,638.5 L 449.0,638.2 L 448.7,637.5 L 448.7,634.8 Z M 370.2,630.0 L 369.7,630.7 L 370.0,646.2 L 371.7,646.5 L 372.7,645.7 L 372.5,637.0 L 373.3,636.3 L 381.5,646.2 L 384.0,646.2 L 384.7,645.0 L 384.5,631.5 L 384.0,630.2 L 382.7,629.8 L 381.7,630.7 L 381.7,639.7 L 380.8,640.3 L 372.8,630.3 Z M 353.3,629.8 L 349.7,631.3 L 347.2,633.8 L 346.2,636.5 L 346.2,639.8 L 347.7,643.2 L 349.3,644.8 L 352.5,646.3 L 356.2,646.7 L 359.5,645.5 L 361.5,643.8 L 363.3,640.3 L 363.7,637.2 L 362.5,633.8 L 361.7,632.7 L 359.7,631.0 L 357.5,630.0 Z M 353.8,632.7 L 355.8,632.7 L 358.0,633.3 L 359.5,634.8 L 360.5,637.0 L 360.3,639.5 L 359.7,641.2 L 358.2,642.7 L 356.0,643.7 L 353.8,643.7 L 351.5,642.7 L 350.0,641.2 L 349.0,638.8 L 349.3,636.7 L 350.5,634.7 L 352.0,633.3 Z M 295.8,629.8 L 291.7,631.2 L 289.7,632.8 L 288.2,635.7 L 288.0,639.3 L 289.2,642.8 L 291.0,645.0 L 292.8,646.0 L 297.3,646.5 L 300.2,645.8 L 302.2,644.7 L 302.3,643.0 L 300.8,642.2 L 298.2,643.7 L 295.5,643.7 L 293.3,642.7 L 291.0,639.3 L 291.2,636.3 L 292.0,634.7 L 294.2,633.0 L 298.0,632.7 L 301.2,634.0 L 302.5,633.2 L 302.8,632.2 L 301.0,630.7 L 299.0,630.0 Z M 271.0,630.0 L 270.5,630.7 L 270.3,634.0 L 271.0,646.2 L 271.8,646.7 L 276.8,646.7 L 282.5,646.0 L 282.8,644.7 L 282.3,644.0 L 274.7,643.5 L 273.8,643.0 L 273.7,640.3 L 274.2,639.7 L 280.7,639.5 L 281.3,639.2 L 281.7,637.7 L 280.7,636.8 L 274.2,636.8 L 273.5,636.0 L 273.5,633.8 L 274.7,632.8 L 282.0,632.7 L 282.8,631.7 L 282.7,630.3 L 281.3,629.8 Z M 322.3,629.8 L 320.3,630.8 L 319.3,632.0 L 318.7,633.8 L 318.8,636.2 L 320.7,638.5 L 326.3,640.2 L 327.3,641.2 L 327.5,642.2 L 325.8,643.5 L 323.2,643.5 L 319.8,642.2 L 318.5,643.0 L 318.3,644.2 L 320.7,645.8 L 325.8,646.7 L 328.0,646.0 L 329.8,644.7 L 330.8,642.7 L 330.8,640.7 L 329.3,638.3 L 327.2,637.2 L 322.3,635.7 L 321.5,634.2 L 322.5,633.0 L 323.7,632.7 L 326.2,632.7 L 328.7,633.5 L 329.7,632.8 L 330.0,631.5 L 329.5,630.8 L 327.0,629.8 Z M 572.3,598.0 L 570.3,598.8 L 569.5,599.7 L 569.0,600.5 L 568.8,602.2 L 569.0,603.2 L 569.3,603.8 L 570.5,605.2 L 571.7,605.7 L 573.2,605.8 L 574.5,605.5 L 575.7,604.8 L 576.2,604.3 L 576.8,603.2 L 576.8,601.5 L 576.7,600.7 L 576.3,600.0 L 575.5,599.0 L 574.3,598.3 L 573.3,598.0 Z M 599.8,583.7 L 600.7,588.7 L 804.7,585.8 Z M 424.7,587.7 L 423.7,582.8 L 228.7,585.5 Z M 523.8,574.2 L 519.3,580.7 L 518.2,585.3 L 518.2,589.3 L 520.3,596.5 L 526.2,602.7 L 533.8,605.7 L 544.0,605.8 L 551.0,603.7 L 557.7,598.2 L 559.8,593.7 L 560.5,584.2 L 557.8,577.2 L 552.0,572.0 L 545.2,569.2 L 535.5,568.8 L 530.0,570.2 Z M 538.3,575.7 L 543.2,576.0 L 548.5,578.3 L 551.3,581.7 L 552.8,586.2 L 552.8,588.8 L 552.0,592.0 L 550.2,595.0 L 548.0,597.0 L 545.8,598.2 L 540.5,599.5 L 534.0,598.7 L 530.2,596.7 L 528.0,594.3 L 527.0,592.3 L 526.2,588.3 L 527.0,582.8 L 529.3,579.3 L 532.8,577.0 Z M 460.2,573.2 L 456.2,577.5 L 453.3,585.8 L 454.0,593.0 L 458.7,600.5 L 464.2,604.2 L 470.7,605.8 L 482.2,605.0 L 490.5,601.2 L 490.5,600.0 L 486.5,596.0 L 476.2,599.2 L 467.8,598.0 L 464.2,595.5 L 461.3,589.3 L 462.8,581.7 L 467.5,577.3 L 476.7,575.7 L 487.0,578.8 L 490.2,575.0 L 490.0,573.7 L 484.3,570.2 L 478.2,568.8 L 468.8,569.2 Z M 286.3,470.8 L 286.3,547.2 L 303.3,547.0 L 304.3,524.8 L 324.7,524.7 L 346.5,547.3 L 368.7,547.3 L 346.0,523.8 L 359.3,517.7 L 365.8,507.5 L 366.7,491.7 L 363.7,482.8 L 359.2,477.5 L 352.0,473.2 L 340.8,470.8 Z M 303.8,488.0 L 304.8,487.2 L 339.5,487.0 L 343.3,487.8 L 346.2,489.3 L 348.7,492.8 L 348.8,501.0 L 347.7,504.0 L 346.0,505.8 L 340.2,508.7 L 304.7,508.8 L 303.7,507.5 Z M 679.8,470.7 L 641.8,547.3 L 659.7,547.3 L 666.8,534.2 L 712.2,533.8 L 719.7,547.2 L 737.7,547.3 L 699.8,471.0 Z M 690.0,487.7 L 694.8,496.3 L 704.8,517.8 L 703.8,518.7 L 698.3,518.8 L 674.7,518.7 L 674.3,517.2 L 688.2,489.0 L 688.8,487.8 Z M 579.2,470.7 L 579.5,485.7 L 606.3,486.3 L 606.5,546.5 L 623.7,547.3 L 624.3,486.8 L 651.0,485.5 L 651.0,470.8 Z M 504.5,470.7 L 504.3,547.0 L 573.3,547.2 L 572.8,532.3 L 523.2,532.0 L 522.8,516.3 L 566.7,515.5 L 565.8,501.8 L 522.5,501.3 L 521.7,486.7 L 571.3,485.7 L 572.2,470.8 Z M 409.5,471.0 L 409.8,547.2 L 457.8,546.8 L 471.2,543.0 L 482.8,534.3 L 488.8,524.5 L 491.7,508.2 L 488.3,492.0 L 479.3,480.3 L 469.0,474.2 L 456.2,471.0 Z M 427.3,486.3 L 450.7,486.0 L 461.0,488.2 L 467.2,492.0 L 471.7,498.5 L 473.3,507.8 L 472.2,517.2 L 467.7,525.0 L 462.0,529.0 L 452.8,531.7 L 427.8,531.7 L 427.0,527.3 Z M 166.2,471.0 L 166.2,547.3 L 183.3,546.7 L 183.7,497.7 L 213.5,534.0 L 219.2,535.8 L 251.0,497.2 L 251.7,546.5 L 269.2,547.2 L 268.7,470.7 L 249.7,471.0 L 217.7,511.0 L 185.5,470.7 Z M 787.3,470.5 L 787.0,547.0 L 856.0,547.3 L 856.7,533.7 L 855.3,532.5 L 805.2,532.3 L 804.8,471.5 L 803.3,470.2 Z M 766.3,470.2 L 750.0,471.0 L 750.0,546.8 L 751.0,547.5 L 766.5,547.5 L 767.7,546.3 L 767.7,473.5 Z M 510.7,364.8 L 503.7,372.3 L 503.5,424.7 L 504.7,425.7 L 526.8,425.7 L 527.8,424.0 L 527.7,365.7 L 526.3,364.8 Z M 633.5,361.2 L 633.5,368.5 L 634.7,370.2 L 740.3,365.7 L 728.3,364.0 Z M 389.5,361.5 L 388.7,360.5 L 282.3,365.5 L 388.7,369.8 Z M 398.0,336.7 L 399.0,425.7 L 421.7,424.7 L 422.3,366.0 L 463.2,417.2 L 506.3,357.3 L 538.5,356.8 L 595.3,357.3 L 599.8,373.7 L 593.7,380.0 L 536.8,380.2 L 536.5,401.3 L 570.0,402.0 L 594.0,425.7 L 625.5,425.2 L 600.3,400.8 L 615.7,394.7 L 623.7,380.0 L 623.5,352.7 L 611.2,338.0 L 492.5,335.5 L 461.3,377.8 L 431.5,335.7 Z"/>
+    </svg>
+    <div class="sweep" aria-hidden="true"></div>
+  </div>
+  <p class="sub">Premium Mobile Detailing · Orange County, CA</p>
+  <div class="cta-row">
+    <a class="btn btn-solid" href="sms:+19492854662">Text for a quote</a>
+    <a class="btn" href="#services">See pricing</a>
+  </div>
+  <span class="scroll-hint">Scroll</span>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display chrome">Service Menu</h2><div class="rule"></div>
+      <span class="eyebrow">By appointment · We come to you</span>
+    </div>
+
+    <div class="size-row" role="group" aria-label="Choose your vehicle size">
+      <button class="size-btn" data-size="0" aria-pressed="true"><span class="t">Sedan</span><span class="s">coupe · sedan</span></button>
+      <button class="size-btn" data-size="1" aria-pressed="false"><span class="t">SUV</span><span class="s">2-row · crossover</span></button>
+      <button class="size-btn" data-size="2" aria-pressed="false"><span class="t">Truck / 3-Row</span><span class="s">+ minivan</span></button>
+      <button class="size-btn" data-size="3" aria-pressed="false"><span class="t">XL Truck</span><span class="s">+ large van</span></button>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3 class="display chrome">Maintenance</h3>
+        <p class="meta">Inside &amp; out · ~1 hr</p>
+        <p class="price chrome"><sup>$</sup><span data-prices="100,115,130,150">100</span></p>
+        <p class="split">Exterior only <b><sup>$</sup><span data-prices="60,70,80,90">60</span></b> &nbsp;·&nbsp; Interior only <b><sup>$</sup><span data-prices="70,80,95,110">70</span></b></p>
+        <p class="grp">Exterior</p>
+        <ul>
+          <li>Hand mitt wash</li>
+          <li>Wheels &amp; tires cleaned</li>
+          <li>Exterior glass</li>
+        </ul>
+        <p class="grp">Interior</p>
+        <ul>
+          <li>Full vacuum</li>
+          <li>Surface wipe-down</li>
+          <li>Interior glass</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="display chrome">Full Detail</h3>
+        <p class="meta">Inside &amp; out · ~2.5 hrs</p>
+        <p class="price chrome"><sup>$</sup><span data-prices="200,230,260,290">200</span></p>
+        <p class="split">Exterior only <b><sup>$</sup><span data-prices="130,145,160,180">130</span></b> &nbsp;·&nbsp; Interior only <b><sup>$</sup><span data-prices="120,140,160,180">120</span></b></p>
+        <p class="grp">Exterior</p>
+        <ul>
+          <li>Foam cannon pre-soak, P&amp;S Pearl Auto</li>
+          <li>Two-bucket contact wash</li>
+          <li>Detailed wheels, wells &amp; tires</li>
+          <li>Spray sealant &amp; trim dressing</li>
+          <li>Glass</li>
+        </ul>
+        <p class="grp">Interior</p>
+        <ul>
+          <li>Full vacuum &amp; deep wipe-down</li>
+          <li>Light stain removal</li>
+          <li>Dressing on request · Glass</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="display chrome">Premium Detail</h3>
+        <p class="meta">Inside &amp; out only · ~4 hrs</p>
+        <p class="price chrome"><sup>$</sup><span data-prices="300,340,380,420">300</span></p>
+        <p class="split">The complete service — no partial option.</p>
+        <p class="grp">Exterior</p>
+        <ul>
+          <li>Pre-rinse &amp; foam pre-wash</li>
+          <li>Full contact wash for heavy soil</li>
+          <li>Iron decontamination included</li>
+          <li>Wheels, wells, sealant &amp; dressing</li>
+        </ul>
+        <p class="grp">Interior</p>
+        <ul>
+          <li>Everything in Full Interior</li>
+          <li>Deep stain &amp; spill treatment</li>
+          <li>Interior conditioning</li>
+        </ul>
+      </div>
+    </div>
+    <p class="soil-note">Heavily soiled vehicles may be quoted up one tier on site.</p>
+
+    <div class="addons">
+      <div class="addon"><span class="n">Clay bar &amp; sealant <span class="d">with any exterior package</span></span><span class="p chrome">+$50</span></div>
+      <div class="addon"><span class="n">Engine bay cleaning</span><span class="p chrome">$50</span></div>
+      <div class="addon"><span class="n">Iron decontamination <span class="d">included in Premium</span></span><span class="p chrome">$40</span></div>
+      <div class="addon"><span class="n">Headlight restoration <span class="d">per pair</span></span><span class="p chrome">$60</span></div>
+      <div class="addon"><span class="n">Pet hair removal</span><span class="p chrome">from $30</span></div>
+      <div class="addon"><span class="n">Stain &amp; spill treatment</span><span class="p chrome">from $40</span></div>
+    </div>
+    <div class="byquote">
+      <span class="eyebrow">By quote</span>
+      <span>Paint correction</span><span>·</span><span>Ceramic coating</span><span>·</span><span>Oversized vehicles</span>
+    </div>
+  </div>
+</section>
+
+<section id="standard">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="display chrome">The Standard</h2><div class="rule"></div></div>
+    <div class="pillars">
+      <div class="pillar"><span class="eyebrow">I.</span><h3 class="display chrome">Precision</h3><p>Detailing is in the name. Trim lines, badges, vents, stitching — the places most washes skip are the places we start.</p></div>
+      <div class="pillar"><span class="eyebrow">II.</span><h3 class="display chrome">Protection</h3><p>Clean is temporary; protected lasts. Proper products, proper technique, no shortcuts that cost your paint later.</p></div>
+      <div class="pillar"><span class="eyebrow">III.</span><h3 class="display chrome">Presence</h3><p>Your car should announce itself before you do. We detail it like it&#8217;s ours — because our name rides on it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="display chrome">How It Works</h2><div class="rule"></div></div>
+    <div class="steps">
+      <div class="step"><h3>Text us</h3><p>Send your vehicle, location and the package you want. A photo helps.</p></div>
+      <div class="step"><h3>Get your time</h3><p>Straight pricing from the menu and an appointment that works for you.</p></div>
+      <div class="step"><h3>We come to you</h3><p>Driveway, office, gym parking lot. You get your keys back to a different car.</p></div>
+    </div>
+    <p class="area">Serving <b>all of Orange County</b> — by appointment · we come to you</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Book your detail</span>
+    <a class="phone display chrome" href="tel:+19492854662">(949) 285-4662</a>
+    <div class="lines">
+      <a href="sms:+19492854662">Text us</a>
+      <a href="mailto:rob@mrdetail.co">rob@mrdetail.co</a>
+      <a href="https://instagram.com/mrdetail.oc" target="_blank" rel="noopener">@mrdetail.oc</a>
+    </div>
+  </div>
+</section>
+
+<footer>MR Detail Co · Precision · Protection · Presence</footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.size-btn');
+  var spans=document.querySelectorAll('[data-prices]');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var i=+b.dataset.size;
+      btns.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false')});
+      spans.forEach(function(s){ s.textContent=s.dataset.prices.split(',')[i]; });
+    });
+  });
+})();
+</script>
+</body>
+</html>
