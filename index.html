@@ -100,6 +100,11 @@ section{padding:104px 0;border-bottom:1px solid var(--line)}
 .byquote .eyebrow{margin-right:8px}
 .byquote span{font-size:14px;letter-spacing:.10em;text-transform:uppercase;color:var(--silver)}
 
+/* link from services into calculator */
+.calc-link{margin-top:34px;text-align:center}
+.calc-link a{display:inline-block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 114,'wght' 600;text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--silver);border-bottom:1px solid var(--line-strong);padding-bottom:4px;transition:color .2s,border-color .2s}
+.calc-link a:hover{color:var(--silver-hi);border-color:var(--silver)}
+
 /* pillars */
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:54px}
 .pillar .eyebrow{display:block;margin-bottom:16px}
@@ -114,6 +119,71 @@ section{padding:104px 0;border-bottom:1px solid var(--line)}
 .step p{font-size:14px;color:#9da2a9}
 .area{margin-top:46px;font-size:14px;color:var(--silver-low);text-align:center;letter-spacing:.06em}
 .area b{color:var(--silver);font-weight:500}
+
+/* ---------- estimate calculator ---------- */
+.calc{display:grid;grid-template-columns:1.55fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.calc-build{background:var(--ink)}
+.calc-step{padding:26px 30px;border-bottom:1px solid var(--line)}
+.calc-step:last-child{border-bottom:none}
+.calc-label{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-low);margin-bottom:16px;font-weight:430;flex-wrap:wrap}
+.calc-label .num{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125,'wght' 650;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.08em}
+.calc-label .lock{color:#6a6f76;letter-spacing:.04em;text-transform:none;font-size:11.5px;font-weight:340}
+.opt-row{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+#sizeOpts{grid-template-columns:repeat(4,1fr)}
+#pkgOpts{grid-template-columns:repeat(3,1fr)}
+#covOpts{grid-template-columns:repeat(3,1fr)}
+.opt{background:var(--ink);border:none;color:var(--silver-low);font-family:'Space Grotesk',sans-serif;padding:14px 8px;cursor:pointer;transition:background .22s;text-align:center;line-height:1.3}
+.opt .t{display:block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116,'wght' 600;text-transform:uppercase;letter-spacing:.13em;font-size:12.5px;color:var(--silver)}
+.opt .s{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-top:3px;color:var(--silver-low)}
+.opt:hover{background:#141518}
+.opt[aria-pressed="true"]{background:#1a1c1f}
+.opt[aria-pressed="true"] .t{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.opt[disabled]{opacity:.32;cursor:not-allowed}
+.opt[disabled]:hover{background:var(--ink)}
+
+.addon-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.addon-toggle{display:flex;align-items:center;gap:14px;background:var(--ink);padding:14px 18px;cursor:pointer;transition:background .2s}
+.addon-toggle:hover{background:#141518}
+.addon-toggle input{position:absolute;opacity:0;width:0;height:0}
+.addon-toggle .box{flex:none;width:18px;height:18px;border:1px solid var(--line-strong);position:relative;transition:border-color .2s,background .2s}
+.addon-toggle input:checked + .box{background:var(--chrome);border-color:transparent}
+.addon-toggle input:checked + .box::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #0a0a0b;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.addon-toggle input:focus-visible + .box{outline:2px solid var(--silver);outline-offset:2px}
+.addon-name{flex:1;font-size:14.5px;color:var(--silver)}
+.addon-hint{display:inline-block;font-size:11px;letter-spacing:.04em;color:#6a6f76;margin-left:6px}
+.addon-price{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116,'wght' 620;font-size:15px;white-space:nowrap;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.addon-toggle.is-off{opacity:.4}
+.addon-toggle.is-off,.addon-toggle.is-off *{cursor:not-allowed}
+.addon-toggle.is-included{cursor:default}
+.addon-toggle.is-included .addon-price{background:none;-webkit-text-fill-color:initial;color:var(--silver-low);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+
+.calc-summary{background:var(--panel);padding:34px 30px;display:flex;flex-direction:column;position:sticky;top:24px;align-self:start}
+.calc-summary .eyebrow{display:block;margin-bottom:14px}
+.calc-total{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 120,'wght' 650;font-size:clamp(42px,7vw,58px);letter-spacing:.01em;line-height:1;display:flex;align-items:baseline;gap:3px;flex-wrap:wrap}
+.calc-total .from{font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:.30em;letter-spacing:.1em;text-transform:uppercase;color:var(--silver-low);align-self:center}
+.calc-total .cur{font-size:.5em;color:var(--silver);align-self:flex-start;margin-top:.16em}
+.calc-build-line{margin-top:18px;font-size:14px;color:var(--silver-low)}
+.calc-breakdown{list-style:none;margin-top:22px;display:grid;gap:11px;border-top:1px solid var(--line);padding-top:22px}
+.calc-breakdown:empty{display:none}
+.calc-breakdown li{display:flex;justify-content:space-between;gap:16px;font-size:13.5px;align-items:baseline}
+.calc-breakdown li .lbl{color:var(--silver)}
+.calc-breakdown li .amt{color:var(--silver-low);white-space:nowrap;font-variation-settings:'wght' 500}
+.calc-breakdown li.inc .amt{font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.calc-breakdown li.tot{border-top:1px solid var(--line);padding-top:13px;margin-top:4px}
+.calc-breakdown li.tot .lbl{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--silver-low)}
+.calc-breakdown li.tot .amt{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116,'wght' 650;font-size:18px;color:var(--silver-hi)}
+.calc-fine{margin-top:22px;font-size:11.5px;line-height:1.7;color:#6a6f76;letter-spacing:.02em}
+.calc-cta{margin-top:24px;display:flex;gap:10px}
+.calc-cta .btn{padding:14px 18px;font-size:12px;letter-spacing:.14em}
+#textBuild{flex:1;text-align:center}
+#copyBuild{flex:0 0 auto}
+.calc-cta .btn.is-off{opacity:.4;pointer-events:none}
+
+@media(max-width:880px){
+  .calc{grid-template-columns:1fr}
+  .calc-summary{position:static}
+  #sizeOpts{grid-template-columns:repeat(2,1fr)}
+}
 
 /* contact */
 .contact{text-align:center;border-bottom:none;padding-bottom:84px}
@@ -150,7 +220,7 @@ footer{padding:30px 24px 40px;text-align:center;font-size:12px;color:#54585e;let
   <p class="sub">Premium Mobile Detailing · Orange County, CA</p>
   <div class="cta-row">
     <a class="btn btn-solid" href="sms:+19492854662">Text for a quote</a>
-    <a class="btn" href="#services">See pricing</a>
+    <a class="btn" href="#estimate">Build an estimate</a>
   </div>
   <span class="scroll-hint">Scroll</span>
 </header>
@@ -244,6 +314,68 @@ footer{padding:30px 24px 40px;text-align:center;font-size:12px;color:#54585e;let
       <span class="eyebrow">By quote</span>
       <span>Paint correction</span><span>·</span><span>Ceramic coating</span><span>·</span><span>Oversized vehicles</span>
     </div>
+
+    <p class="calc-link"><a href="#estimate">Build your estimate →</a></p>
+  </div>
+</section>
+
+<section id="estimate">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display chrome">Estimate</h2><div class="rule"></div>
+      <span class="eyebrow">Build it · See the price</span>
+    </div>
+
+    <div class="calc">
+      <div class="calc-build">
+
+        <div class="calc-step">
+          <p class="calc-label"><span class="num">01</span> Vehicle</p>
+          <div class="opt-row" id="sizeOpts" role="group" aria-label="Vehicle size">
+            <button class="opt" type="button" data-size="0" aria-pressed="true"><span class="t">Sedan</span><span class="s">coupe · sedan</span></button>
+            <button class="opt" type="button" data-size="1" aria-pressed="false"><span class="t">SUV</span><span class="s">2-row · crossover</span></button>
+            <button class="opt" type="button" data-size="2" aria-pressed="false"><span class="t">Truck / 3-Row</span><span class="s">+ minivan</span></button>
+            <button class="opt" type="button" data-size="3" aria-pressed="false"><span class="t">XL Truck</span><span class="s">+ large van</span></button>
+          </div>
+        </div>
+
+        <div class="calc-step">
+          <p class="calc-label"><span class="num">02</span> Package</p>
+          <div class="opt-row" id="pkgOpts" role="group" aria-label="Package">
+            <button class="opt" type="button" data-pkg="maintenance" aria-pressed="false"><span class="t">Maintenance</span><span class="s">~1 hr</span></button>
+            <button class="opt" type="button" data-pkg="full" aria-pressed="false"><span class="t">Full Detail</span><span class="s">~2.5 hrs</span></button>
+            <button class="opt" type="button" data-pkg="premium" aria-pressed="false"><span class="t">Premium</span><span class="s">~4 hrs</span></button>
+          </div>
+        </div>
+
+        <div class="calc-step">
+          <p class="calc-label"><span class="num">03</span> Coverage <span class="lock" id="covLock" hidden>· Premium is always inside &amp; out</span></p>
+          <div class="opt-row" id="covOpts" role="group" aria-label="Coverage">
+            <button class="opt" type="button" data-cov="full" aria-pressed="true"><span class="t">Inside &amp; out</span></button>
+            <button class="opt" type="button" data-cov="exterior" aria-pressed="false"><span class="t">Exterior only</span></button>
+            <button class="opt" type="button" data-cov="interior" aria-pressed="false"><span class="t">Interior only</span></button>
+          </div>
+        </div>
+
+        <div class="calc-step">
+          <p class="calc-label"><span class="num">04</span> Add-ons <span class="lock">· optional</span></p>
+          <div class="addon-list" id="addonList"></div>
+        </div>
+
+      </div>
+
+      <aside class="calc-summary" aria-live="polite">
+        <span class="eyebrow">Your estimate</span>
+        <p class="calc-total"><span id="totalNum"><span class="chrome">—</span></span></p>
+        <p class="calc-build-line" id="buildLine">Pick a package to see your price.</p>
+        <ul class="calc-breakdown" id="breakdown"></ul>
+        <p class="calc-fine">An estimate, not a final quote. Heavily soiled vehicles may be quoted up one tier on site, and “from” items are confirmed in person.</p>
+        <div class="calc-cta">
+          <a class="btn btn-solid is-off" id="textBuild" href="sms:+19492854662" aria-disabled="true">Text this build</a>
+          <button class="btn is-off" id="copyBuild" type="button" disabled>Copy</button>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -285,6 +417,7 @@ footer{padding:30px 24px 40px;text-align:center;font-size:12px;color:#54585e;let
 <footer>MR Detail Co · Precision · Protection · Presence</footer>
 
 <script>
+/* vehicle-size price toggle for the Service Menu cards */
 (function(){
   var btns=document.querySelectorAll('.size-btn');
   var spans=document.querySelectorAll('[data-prices]');
@@ -295,6 +428,214 @@ footer{padding:30px 24px 40px;text-align:center;font-size:12px;color:#54585e;let
       spans.forEach(function(s){ s.textContent=s.dataset.prices.split(',')[i]; });
     });
   });
+})();
+</script>
+
+<script>
+/* estimate calculator
+   NOTE: package prices live here AND in the Service Menu cards above (data-prices).
+   If you change a price, update both places. */
+(function(){
+  var PRICES={
+    maintenance:{full:[100,115,130,150],exterior:[60,70,80,90],interior:[70,80,95,110]},
+    full:{full:[200,230,260,290],exterior:[130,145,160,180],interior:[120,140,160,180]},
+    premium:{full:[300,340,380,420]}
+  };
+  var PKG={maintenance:'Maintenance',full:'Full Detail',premium:'Premium Detail'};
+  var COV={full:'Inside & out',exterior:'Exterior only',interior:'Interior only'};
+  var SIZE=['Sedan','SUV','Truck / 3-Row','XL Truck'];
+  var ADDON_ORDER=['clay','engine','iron','headlight','pethair','stain'];
+  var ADDON={
+    clay:{label:'Clay bar & sealant',price:50,ext:true},
+    engine:{label:'Engine bay cleaning',price:50},
+    iron:{label:'Iron decontamination',price:40,ext:true,prem:true},
+    headlight:{label:'Headlight restoration',price:60,sub:'per pair'},
+    pethair:{label:'Pet hair removal',price:30,from:true},
+    stain:{label:'Stain & spill treatment',price:40,from:true}
+  };
+
+  var size=0, pkg=null, cov='full';
+  var chosen={};
+
+  function $(id){return document.getElementById(id);}
+  var sizeOpts=$('sizeOpts'), pkgOpts=$('pkgOpts'), covOpts=$('covOpts');
+  var addonList=$('addonList'), covLock=$('covLock');
+  var totalNum=$('totalNum'), buildLine=$('buildLine'), breakdown=$('breakdown');
+  var textBuild=$('textBuild'), copyBuild=$('copyBuild');
+
+  function money(n){return '$'+n;}
+  function price(a){return (a.from?'from $':'+$')+a.price;}
+
+  /* build add-on rows */
+  ADDON_ORDER.forEach(function(k){
+    var a=ADDON[k];
+    var lbl=document.createElement('label');
+    lbl.className='addon-toggle';
+    lbl.setAttribute('data-key',k);
+    lbl.innerHTML=
+      '<input type="checkbox">'+
+      '<span class="box" aria-hidden="true"></span>'+
+      '<span class="addon-name">'+a.label+' <span class="addon-hint"></span></span>'+
+      '<span class="addon-price">'+price(a)+'</span>';
+    var input=lbl.querySelector('input');
+    input.addEventListener('change',function(){
+      if(input.disabled){return;}
+      if(input.checked){chosen[k]=true;}else{delete chosen[k];}
+      render();
+    });
+    addonList.appendChild(lbl);
+  });
+
+  /* option buttons */
+  Array.prototype.forEach.call(sizeOpts.querySelectorAll('.opt'),function(b){
+    b.addEventListener('click',function(){size=+b.getAttribute('data-size');render();});
+  });
+  Array.prototype.forEach.call(pkgOpts.querySelectorAll('.opt'),function(b){
+    b.addEventListener('click',function(){
+      pkg=b.getAttribute('data-pkg');
+      if(pkg==='premium'){cov='full';}
+      render();
+    });
+  });
+  Array.prototype.forEach.call(covOpts.querySelectorAll('.opt'),function(b){
+    b.addEventListener('click',function(){if(b.disabled){return;}cov=b.getAttribute('data-cov');render();});
+  });
+
+  function render(){
+    var isPrem = pkg==='premium';
+
+    /* pressed states */
+    Array.prototype.forEach.call(sizeOpts.querySelectorAll('.opt'),function(b){
+      b.setAttribute('aria-pressed', (+b.getAttribute('data-size')===size)?'true':'false');
+    });
+    Array.prototype.forEach.call(pkgOpts.querySelectorAll('.opt'),function(b){
+      b.setAttribute('aria-pressed', (b.getAttribute('data-pkg')===pkg)?'true':'false');
+    });
+
+    /* coverage — Premium locks to inside & out */
+    covLock.hidden = !isPrem;
+    Array.prototype.forEach.call(covOpts.querySelectorAll('.opt'),function(b){
+      var c=b.getAttribute('data-cov');
+      if(isPrem){
+        b.disabled = (c!=='full');
+        b.setAttribute('aria-pressed', c==='full'?'true':'false');
+      }else{
+        b.disabled=false;
+        b.setAttribute('aria-pressed', (c===cov)?'true':'false');
+      }
+    });
+
+    /* add-on availability + labels */
+    ADDON_ORDER.forEach(function(k){
+      var a=ADDON[k];
+      var row=addonList.querySelector('[data-key="'+k+'"]');
+      var input=row.querySelector('input');
+      var priceEl=row.querySelector('.addon-price');
+      var hintEl=row.querySelector('.addon-hint');
+      var disabled=false, included=false, hint=(a.sub||'');
+
+      if(a.prem && isPrem){included=true; disabled=true;}
+      if(a.ext && cov==='interior' && !included){disabled=true; hint='needs an exterior package';}
+
+      if(disabled && chosen[k]){delete chosen[k];}
+      input.checked=!!chosen[k];
+      input.disabled=disabled;
+
+      row.classList.toggle('is-off', disabled && !included);
+      row.classList.toggle('is-included', included);
+
+      priceEl.textContent = included ? 'Included' : price(a);
+      hintEl.textContent = included ? '' : hint;
+    });
+
+    /* compute */
+    var rows=[], total=0, from=false;
+    if(pkg){
+      var base=PRICES[pkg][isPrem?'full':cov][size];
+      var baseLabel=PKG[pkg]+' — '+SIZE[size]+((!isPrem && cov!=='full')?' · '+COV[cov]:'');
+      rows.push({lbl:baseLabel, amt:money(base)});
+      total+=base;
+      if(isPrem){rows.push({lbl:'Iron decontamination', amt:'Included', inc:true});}
+      ADDON_ORDER.forEach(function(k){
+        if(!chosen[k]) return;
+        var a=ADDON[k];
+        if(a.prem && isPrem) return;
+        rows.push({lbl:a.label, amt:(a.from?'from ':'')+money(a.price)});
+        total+=a.price;
+        if(a.from) from=true;
+      });
+    }
+
+    /* total display */
+    if(pkg){
+      totalNum.innerHTML=(from?'<span class="from">from </span>':'')+'<span class="cur">$</span><span class="chrome">'+total+'</span>';
+      buildLine.hidden=true;
+    }else{
+      totalNum.innerHTML='<span class="chrome">—</span>';
+      buildLine.hidden=false;
+    }
+
+    /* breakdown */
+    breakdown.innerHTML='';
+    rows.forEach(function(r){
+      var li=document.createElement('li');
+      if(r.inc) li.className='inc';
+      li.innerHTML='<span class="lbl">'+r.lbl+'</span><span class="amt">'+r.amt+'</span>';
+      breakdown.appendChild(li);
+    });
+    if(pkg){
+      var lt=document.createElement('li');
+      lt.className='tot';
+      lt.innerHTML='<span class="lbl">Estimated total</span><span class="amt">'+(from?'from ':'')+money(total)+'</span>';
+      breakdown.appendChild(lt);
+    }
+
+    /* text / copy payload (customer → MR Detail) */
+    var enabled=!!pkg;
+    textBuild.classList.toggle('is-off', !enabled);
+    copyBuild.classList.toggle('is-off', !enabled);
+    textBuild.setAttribute('aria-disabled', enabled?'false':'true');
+    copyBuild.disabled=!enabled;
+
+    if(enabled){
+      var picked=ADDON_ORDER.filter(function(k){return chosen[k] && !(ADDON[k].prem && isPrem);})
+                            .map(function(k){return ADDON[k].label;});
+      var msg=
+        'Hi! I\u2019d like to book a detail (found you through your site).\n'+
+        'Vehicle: '+SIZE[size]+'\n'+
+        'Package: '+PKG[pkg]+(isPrem?'':' \u2014 '+COV[cov])+'\n'+
+        'Add-ons: '+(picked.length?picked.join(', '):'none')+'\n'+
+        'Estimated total: '+(from?'from ':'')+money(total)+'\n'+
+        'Location: ';
+      textBuild.href='sms:+19492854662?&body='+encodeURIComponent(msg);
+      textBuild.dataset.msg=msg;
+    }else{
+      textBuild.href='sms:+19492854662';
+      textBuild.dataset.msg='';
+    }
+  }
+
+  copyBuild.addEventListener('click',function(){
+    var msg=textBuild.dataset.msg||'';
+    if(!msg) return;
+    var done=function(){
+      var old=copyBuild.textContent;
+      copyBuild.textContent='Copied';
+      setTimeout(function(){copyBuild.textContent=old;},1400);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(msg).then(done).catch(function(){fallbackCopy(msg);done();});
+    }else{fallbackCopy(msg);done();}
+  });
+  function fallbackCopy(text){
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try{document.execCommand('copy');}catch(e){}
+    document.body.removeChild(ta);
+  }
+
+  render();
 })();
 </script>
 </body>
