@@ -220,20 +220,17 @@ html{scroll-padding-top:74px}
 .foot-links a:hover,.foot-contact a:hover{color:var(--silver-hi)}
 .foot-tag{margin-top:30px;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#54585e}
 
-/* ---------- gallery (before / after) ---------- */
-.ba-intro{max-width:640px;font-size:15.5px;color:#9da2a9;margin-bottom:42px;line-height:1.7}
-.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.ba-card{background:var(--ink);padding:22px}
-.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ba-frame{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#141518,#0c0d0f);border:1px solid var(--line)}
-.ba-frame img{width:100%;height:100%;object-fit:cover;display:block}
-.ba-tag{position:absolute;left:10px;top:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);background:rgba(10,10,11,.7);padding:4px 9px;border:1px solid var(--line-strong)}
-.ba-ph{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 120,'wght' 680;letter-spacing:.14em;font-size:26px;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.35}
-.ba-frame.empty .ba-ph{display:flex}
-.ba-cap{margin-top:16px}
-.ba-cap h3{font-size:16px;color:var(--silver)}
-.ba-cap p{font-size:13px;color:var(--silver-low);margin-top:4px;line-height:1.6}
-@media(max-width:760px){.ba-grid{grid-template-columns:1fr}}
+/* ---------- gallery (finished work) ---------- */
+.shots-intro{max-width:640px;font-size:15.5px;color:#9da2a9;margin-bottom:42px;line-height:1.7}
+.shots{column-count:2;column-gap:16px}
+.shot{break-inside:avoid;margin:0 0 16px;border:1px solid var(--line);background:var(--panel);overflow:hidden}
+.shot img{width:100%;height:auto;display:block;transition:transform .5s ease}
+.shot:hover img{transform:scale(1.03)}
+.shot figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 16px;border-top:1px solid var(--line)}
+.shot .v{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116,'wght' 600;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:var(--silver)}
+.shot .s{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--silver-low);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.shot img,.shot:hover img{transition:none;transform:none}}
+@media(max-width:680px){.shots{column-count:1}}
 
 /* ---------- detailing guide ---------- */
 .guide-lede{max-width:680px;font-size:16px;color:#9da2a9;line-height:1.75}
